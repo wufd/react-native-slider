@@ -1,5 +1,4 @@
 /* eslint-disable react-native/no-color-literals */
-/* @flow */
 import {StyleSheet} from "react-native";
 
 const COLORS = {

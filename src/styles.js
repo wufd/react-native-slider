@@ -1,4 +1,3 @@
-/* @flow */
 import {StyleSheet} from "react-native";
 
 const TRACK_SIZE = 4;
