@@ -181,14 +181,14 @@ module.exports = {
         "prettier/prettier": [
             ERROR,
             {
-                printWidth: 80,
-                tabWidth: 4,
-                singleQuote: false,
-                trailingComma: "es5",
-                bracketSpacing: false,
-                semi: true,
-                useTabs: false,
-                jsxBracketSameLine: false,
+                "printWidth": 80,
+                "tabWidth": 4,
+                "singleQuote": false,
+                "trailingComma": "es5",
+                "bracketSpacing": false,
+                "semi": true,
+                "useTabs": false,
+                "jsxBracketSameLine": false
             },
         ],
 

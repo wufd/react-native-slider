@@ -32,7 +32,7 @@ const CustomThumb = () => (
 
 const SliderContainer = (props: {
     caption: string,
-    children: React.node,
+    children: *,
     sliderValue?: number | Array<number>,
 }) => {
     const {caption, sliderValue} = props;

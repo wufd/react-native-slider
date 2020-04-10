@@ -27,7 +27,7 @@ function Rect(x: number, y: number, width: number, height: number) {
             nativeY >= this.y &&
             nativeX <= this.x + this.width &&
             nativeY <= this.y + this.height,
-        trackDistanceToPoint: nativeX => {
+        trackDistanceToPoint: (nativeX) => {
             if (nativeX < this.x) return this.x - nativeX;
             if (nativeX > this.x + this.width)
                 return nativeX - (this.x + this.width);
@@ -148,7 +148,7 @@ export class Slider extends PureComponent<SliderProps, SliderState> {
     }
 
     _getRawValues(values: Animated.Value) {
-        return values.map(value => value.__getValue());
+        return values.map((value) => value.__getValue());
     }
 
     _handleStartShouldSetPanResponder = (
@@ -310,14 +310,11 @@ export class Slider extends PureComponent<SliderProps, SliderState> {
 
     _setCurrentValueAnimated = (value: number, thumbIndex: number = 0) => {
         const {animationType} = this.props;
-        const animationConfig = Object.assign(
-            {},
-            DEFAULT_ANIMATION_CONFIGS[animationType],
-            this.props.animationConfig,
-            {
-                toValue: value,
-            }
-        );
+        const animationConfig = {
+            ...DEFAULT_ANIMATION_CONFIGS[animationType],
+            ...this.props.animationConfig,
+            toValue: value,
+        };
 
         Animated[animationType](
             this.state.values[thumbIndex],
@@ -476,7 +473,7 @@ export class Slider extends PureComponent<SliderProps, SliderState> {
             ...other
         } = this.props;
         const {allMeasured, containerSize, thumbSize, values} = this.state;
-        const interpolatedThumbValues = values.map(v =>
+        const interpolatedThumbValues = values.map((v) =>
             v.interpolate({
                 inputRange: [minimumValue, maximumValue],
                 outputRange: I18nManager.isRTL
