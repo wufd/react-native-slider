@@ -9,9 +9,18 @@ module.exports = {
         es6: true,
         jest: true,
         jasmine: true,
+        "react-native/react-native": true,
         "shared-node-browser": true,
     },
+    globals: {
+        fetch: true,
+        device: true,
+        element: true,
+        by: true,
+        Response: true,
+    },
     extends: [
+        "@react-native-community",
         "airbnb",
         "plugin:flowtype/recommended",
         "plugin:react-native/all",
@@ -33,14 +42,34 @@ module.exports = {
         "react",
         "react-native",
         "react-native-a11y",
+        "unicorn",
     ],
     rules: {
         // builtins
+        camelcase: [
+            WARN,
+            {
+                allow: [
+                    "UNSAFE_componentWillMount",
+                    "UNSAFE_componentWillReceiveProps",
+                ],
+            },
+        ],
         "class-methods-use-this": OFF,
-        "comma-dangle": [ERROR, "always-multiline"],
+        "comma-dangle": [
+            ERROR,
+            {
+                arrays: "always-multiline",
+                objects: "always-multiline",
+                imports: "always-multiline",
+                exports: "always-multiline",
+                functions: "never",
+            },
+        ],
         "default-case": OFF,
         eqeqeq: [ERROR, "always", {null: "ignore"}],
-        indent: ["error", 4],
+        "max-classes-per-file": OFF,
+        "no-async-promise-executor": WARN,
         "no-case-declarations": OFF,
         "no-extra-boolean-cast": OFF,
         "no-underscore-dangle": OFF,
@@ -48,7 +77,7 @@ module.exports = {
         "sort-imports": OFF,
 
         // eslint-plugin-flowtype
-        "flowtype/delimiter-dangle": [ERROR, "always-multiline"],
+        "flowtype/delimiter-dangle": [OFF, "always-multiline"],
         "flowtype/no-dupe-keys": ERROR,
         "flowtype/no-types-missing-file-annotation": ERROR,
         "flowtype/no-weak-types": [
@@ -77,8 +106,10 @@ module.exports = {
         "flowtype/sort-keys": ERROR,
 
         // eslint-plugin-import
+        "import/extensions": WARN,
         "import/first": OFF,
         "import/prefer-default-export": OFF,
+        "import/no-cycle": WARN,
         "import/no-extraneous-dependencies": [
             ERROR,
             {
@@ -117,10 +148,12 @@ module.exports = {
         // eslint-plugin-react
         "react/default-props-match-prop-types": OFF,
         "react/destructuring-assignment": OFF,
+        "react/no-array-index-key": OFF,
         "react/no-unescaped-entities": OFF,
         "react/no-unused-prop-types": OFF,
         "react/jsx-boolean-value": OFF,
         "react/jsx-filename-extension": OFF,
+        "react/jsx-props-no-spreading": OFF,
         // Enforce props alphabetical sorting
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-sort-props.md
         "react/jsx-sort-props": [
@@ -154,8 +187,10 @@ module.exports = {
                         "defaultProps",
                         "static-methods",
                         "componentWillMount",
+                        "UNSAFE_componentWillMount",
                         "componentDidMount",
                         "componentWillReceiveProps",
+                        "UNSAFE_componentWillReceiveProps",
                         "shouldComponentUpdate",
                         "/^should.+$/",
                         "componentWillUpdate",
@@ -168,29 +203,44 @@ module.exports = {
                 },
             },
         ],
+        "react/state-in-constructor": OFF,
+        "react/static-property-placement": OFF,
+
+        "react-hooks/rules-of-hooks": WARN,
+
+        // eslint-plugin-react-native
+        "react-native/no-color-literals": ERROR,
+        "react-native/no-inline-styles": OFF,
+        "react-native/no-raw-text": OFF,
+        "react-native/no-unused-styles": ERROR,
+        "react-native/sort-styles": ERROR,
+        "react-native/split-platform-components": ERROR,
 
         // eslint-plugin-react-native-a11y
-        "react-native-a11y/accessibility-label": ERROR,
-        "react-native-a11y/has-accessibility-props": ERROR,
-        "react-native-a11y/has-valid-accessibility-component-type": ERROR,
-        "react-native-a11y/has-valid-accessibility-traits": ERROR,
-        "react-native-a11y/has-valid-important-for-accessibility": ERROR,
-        "react-native-a11y/no-nested-touchables": ERROR,
+        "react-native-a11y/has-accessibility-props": WARN,
+        "react-native-a11y/has-valid-accessibility-component-type": WARN,
+        "react-native-a11y/has-valid-accessibility-traits": WARN,
+        "react-native-a11y/has-valid-important-for-accessibility": WARN,
+        "react-native-a11y/no-nested-touchables": WARN,
 
         // eslint-plugin-prettier
         "prettier/prettier": [
             ERROR,
             {
-                "printWidth": 80,
-                "tabWidth": 4,
-                "singleQuote": false,
-                "trailingComma": "es5",
-                "bracketSpacing": false,
-                "semi": true,
-                "useTabs": false,
-                "jsxBracketSameLine": false
+                printWidth: 80,
+                tabWidth: 4,
+                singleQuote: false,
+                trailingComma: "es5",
+                bracketSpacing: false,
+                semi: true,
+                useTabs: false,
+                parser: "babel",
+                jsxBracketSameLine: false,
             },
         ],
+
+        // eslint-plugin-unicorn
+        "unicorn/no-abusive-eslint-disable": ERROR,
 
         // LEGACY
         yoda: [ERROR, "never"],

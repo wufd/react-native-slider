@@ -1,6 +1,7 @@
 {
     "name": "@miblanchard/react-native-slider-workspace",
     "version": "0.0.0",
+    "private": true,
     "workspaces": {
         "packages": [
             "SliderExampleApp",
@@ -19,11 +20,8 @@
     ],
     "license": "MIT",
     "scripts": {
-        "build": "babel src --out-dir lib",
-        "clean": "rimraf lib",
-        "lint": "eslint . --fix --cache --cache-location ./node_modules/.cache/eslint",
-        "prepublish": "npm run clean && npm run build",
-        "start": "node_modules/react-native/packager/packager.sh"
+        "bundle:package": "yarn workspace @miblanchard/react-native-slider prepublish",
+        "lint": "eslint . --fix --cache --cache-location ./node_modules/.cache/eslint"
     },
     "repository": {
         "type": "git",
@@ -33,20 +31,23 @@
         "@babel/cli": "7.8.4",
         "@babel/core": "7.9.0",
         "@babel/runtime": "7.9.2",
+        "@react-native-community/eslint-config":"1.0.0",
         "babel-eslint": "10.1.0",
         "eslint": "6.8.0",
         "eslint-config-airbnb": "18.1.0",
         "eslint-config-prettier": "6.10.1",
+        "eslint-import-resolver-babel-module": "5.1.2",
         "eslint-plugin-flowtype": "4.7.0",
         "eslint-plugin-import": "2.20.2",
         "eslint-plugin-jsx-a11y": "6.2.3",
         "eslint-plugin-prettier": "3.1.2",
-        "eslint-plugin-react": "7.19.0",
-        "eslint-plugin-react-native": "3.8.1",
         "eslint-plugin-react-native-a11y": "2.0.0",
+        "eslint-plugin-react-native": "3.8.1",
+        "eslint-plugin-react": "7.19.0",
         "eslint-plugin-unicorn": "18.0.1",
         "flow-bin": "0.102.0",
         "flow-typed": "2.5.2",
-        "prettier": "2.0.2"
+        "prettier": "2.0.4",
+        "typescript": "3.8.3"
     }
 }

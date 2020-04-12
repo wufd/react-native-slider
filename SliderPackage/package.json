@@ -22,15 +22,13 @@
     "scripts": {
         "build": "babel src --out-dir lib",
         "clean": "rimraf lib",
-        "lint": "eslint . --fix --cache --cache-location ./node_modules/.cache/eslint",
-        "prepublish": "npm run clean && npm run build",
-        "start": "node_modules/react-native/packager/packager.sh"
+        "prepublish": "npm run clean && npm run build"
     },
     "repository": {
         "type": "git",
         "url": "git@github.com:miblanchard/react-native-slider.git"
     },
-    "peerDependencies": {
+    "dependencies": {
         "react": ">=16.8.0",
         "react-native": ">=0.59.0"
     },
@@ -39,12 +37,7 @@
         "@babel/core": "7.9.0",
         "@babel/runtime": "7.9.2",
         "babel-eslint": "10.1.0",
-        "flow-bin": "0.102.0",
-        "flow-typed": "2.5.2",
         "metro-react-native-babel-preset": "0.55.0",
-        "prettier": "2.0.2",
-        "react": "16.8.3",
-        "react-native": "0.59.9",
         "rimraf": "3.0.2"
     }
 }

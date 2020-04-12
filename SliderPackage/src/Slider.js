@@ -1,4 +1,3 @@
-/* eslint-disable react/static-property-placement */
 /* @flow */
 import React, {PureComponent} from "react";
 import {
