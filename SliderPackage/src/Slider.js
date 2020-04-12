@@ -1,3 +1,4 @@
+/* eslint-disable react/static-property-placement */
 /* @flow */
 import React, {PureComponent} from "react";
 import {
@@ -162,7 +163,7 @@ export class Slider extends PureComponent<SliderProps, SliderState> {
         return false;
     }
 
-    _handlePanResponderGrant = (e: PressEvent, gestureState: GestureState) => {
+    _handlePanResponderGrant = (e: PressEvent) => {
         const {thumbSize} = this.state;
         const {nativeEvent} = e;
         this._previousLeft = this.props.trackClickable

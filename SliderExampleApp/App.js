@@ -1,7 +1,7 @@
 /* @flow */
 import React, {useState} from "react";
 import {SafeAreaView, ScrollView, Text, View} from "react-native";
-import {Slider} from "../src/Slider";
+import {Slider} from "@miblanchard/react-native-slider";
 
 // constants
 const thumbImage = require("./img/thumb.png");
@@ -41,11 +41,11 @@ const SliderContainer = (props: {
     );
 
     const renderChildren = () => {
-        return React.Children.map(props.children, child => {
+        return React.Children.map(props.children, (child) => {
             if (!!child && child.type === Slider) {
                 return React.cloneElement(child, {
                     value,
-                    onValueChange: val => setValue(val),
+                    onValueChange: (val) => setValue(val),
                 });
             }
             return child;

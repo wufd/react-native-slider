@@ -1,12 +1,13 @@
 {
-    "name": "@miblanchard/react-native-slider-workspace",
-    "version": "0.0.0",
-    "workspaces": {
-        "packages": [
-            "SliderExampleApp",
-            "SliderPackage"
-        ]
-    },
+    "name": "@miblanchard/react-native-slider",
+    "version": "1.1.0",
+    "description": "A pure JavaScript <Slider /> component for react-native",
+    "main": "lib/Slider.js",
+    "typings": "src/index",
+    "files": [
+        "lib",
+        "src"
+    ],
     "contributors": [
         "Michael Blanchard <michael.james.blanchard@gmail.com (https://github.com/miblanchard)>"
     ],
@@ -29,24 +30,21 @@
         "type": "git",
         "url": "git@github.com:miblanchard/react-native-slider.git"
     },
+    "peerDependencies": {
+        "react": ">=16.8.0",
+        "react-native": ">=0.59.0"
+    },
     "devDependencies": {
         "@babel/cli": "7.8.4",
         "@babel/core": "7.9.0",
         "@babel/runtime": "7.9.2",
         "babel-eslint": "10.1.0",
-        "eslint": "6.8.0",
-        "eslint-config-airbnb": "18.1.0",
-        "eslint-config-prettier": "6.10.1",
-        "eslint-plugin-flowtype": "4.7.0",
-        "eslint-plugin-import": "2.20.2",
-        "eslint-plugin-jsx-a11y": "6.2.3",
-        "eslint-plugin-prettier": "3.1.2",
-        "eslint-plugin-react": "7.19.0",
-        "eslint-plugin-react-native": "3.8.1",
-        "eslint-plugin-react-native-a11y": "2.0.0",
-        "eslint-plugin-unicorn": "18.0.1",
         "flow-bin": "0.102.0",
         "flow-typed": "2.5.2",
-        "prettier": "2.0.2"
+        "metro-react-native-babel-preset": "0.55.0",
+        "prettier": "2.0.2",
+        "react": "16.8.3",
+        "react-native": "0.59.9",
+        "rimraf": "3.0.2"
     }
 }
