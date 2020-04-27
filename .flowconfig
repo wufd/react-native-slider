@@ -3,14 +3,14 @@
 .*/*[.]android.js
 
 ; Ignore "BUCK" generated dirs
-<PROJECT_ROOT>/\.buckd/
+<PROJECT_ROOT>/SliderExampleApp\.buckd/
 
 ; Ignore polyfills
-node_modules/react-native/Libraries/polyfills/.*
+.*/node_modules/react-native/Libraries/polyfills/.*
 
 ; These should not be required directly
 ; require from fbjs/lib instead: require('fbjs/lib/warning')
-node_modules/warning/.*
+.*/node_modules/warning/.*
 
 ; Flow doesn't support platforms
 .*/Libraries/Utilities/LoadingView.js
@@ -21,8 +21,9 @@ node_modules/warning/.*
 [include]
 
 [libs]
-node_modules/react-native/interface.js
-node_modules/react-native/flow/
+flow-typed
+.*/node_modules/react-native/interface.js
+.*/node_modules/react-native/flow/
 
 [options]
 emoji=true
@@ -56,7 +57,6 @@ untyped-type-import=warn
 nonstrict-import=warn
 deprecated-type=warn
 unsafe-getters-setters=warn
-inexact-spread=warn
 unnecessary-invariant=warn
 signature-verification-failure=warn
 deprecated-utility=error
@@ -71,4 +71,4 @@ untyped-import
 untyped-type-import
 
 [version]
-^0.113.0
+>=0.113.0
