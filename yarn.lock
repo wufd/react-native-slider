@@ -41,7 +41,7 @@
     invariant "^2.2.4"
     semver "^5.5.0"
 
-"@babel/core@7.9.0", "@babel/core@^7.8.6":
+"@babel/core@7.9.0", "@babel/core@^7.9.0":
   version "7.9.0"
   resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.9.0.tgz#ac977b538b77e132ff706f3b8a4dbad09c03c56e"
   integrity sha512-kWc7L0fw1xwvI0zi8OKVBuxRVefwGOrKSQMvrQ3dW+bIIavBY3/NpXmpjMy7bQnLgwgzWQZ8TlM57YHpHNHz4w==
@@ -1820,12 +1820,12 @@
     wcwidth "^1.0.1"
     ws "^1.1.0"
 
-"@react-native-community/eslint-config@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@react-native-community/eslint-config/-/eslint-config-1.0.0.tgz#884288e91da7599e35cb34258ecf14a58a7cab35"
-  integrity sha512-Q+eqh+8qqam9B56EAL6BgKXAL/NL2v+1JfSkMjBbRBs9wR/6umeLQrk60sy6Fd5TS6orgWPI1IBJXNoRavdCRg==
+"@react-native-community/eslint-config@1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@react-native-community/eslint-config/-/eslint-config-1.1.0.tgz#2dacad06dd44d13e778510864473fc6091f080c0"
+  integrity sha512-hwb1hC28BhkwLwnO6vDISV6XZbipw2RIEhBVBN+pE7AUG9HjFXxoksiiOSoYgox9C8g86VJwHnKpak/3NnVBkQ==
   dependencies:
-    "@react-native-community/eslint-plugin" "^1.0.0"
+    "@react-native-community/eslint-plugin" "^1.1.0"
     "@typescript-eslint/eslint-plugin" "^2.25.0"
     "@typescript-eslint/parser" "^2.25.0"
     babel-eslint "10.1.0"
@@ -1839,10 +1839,10 @@
     eslint-plugin-react-native "3.8.1"
     prettier "^2.0.2"
 
-"@react-native-community/eslint-plugin@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@react-native-community/eslint-plugin/-/eslint-plugin-1.0.0.tgz#ae9a430f2c5795debca491f15a989fce86ea75a0"
-  integrity sha512-GLhSN8dRt4lpixPQh+8prSCy6PYk/MT/mvji/ojAd5yshowDo6HFsimCSTD/uWAdjpUq91XK9tVdTNWfGRlKQA==
+"@react-native-community/eslint-plugin@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@react-native-community/eslint-plugin/-/eslint-plugin-1.1.0.tgz#e42b1bef12d2415411519fd528e64b593b1363dc"
+  integrity sha512-W/J0fNYVO01tioHjvYWQ9m6RgndVtbElzYozBq1ZPrHO/iCzlqoySHl4gO/fpCl9QEFjvJfjPgtPMTMlsoq5DQ==
 
 "@sindresorhus/is@^2.0.0":
   version "2.1.0"
@@ -2036,10 +2036,10 @@
   dependencies:
     compare-versions "^3.4.0"
 
-"@unimodules/react-native-adapter@~5.1.1":
-  version "5.1.1"
-  resolved "https://registry.yarnpkg.com/@unimodules/react-native-adapter/-/react-native-adapter-5.1.1.tgz#bb67a021c722772e716eaa3817084cd988642e4e"
-  integrity sha512-PlP6QQ2Z3ckORhS07tWcIweK+CkkxyzitJ1j1FD+N+G7G/CB99/vSfCEQ7BFVAPRO5vPrcS2QcwSDgvz06wKVA==
+"@unimodules/react-native-adapter@~5.2.0":
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/@unimodules/react-native-adapter/-/react-native-adapter-5.2.0.tgz#96bfd4cfbad5083b3aa1152ee0a4ac84fa9dfb69"
+  integrity sha512-S3HMEeQbV6xs7ORRcxXFGMk38DAnxqNcZG9T8JkX/KGY9ILUUqTS/e68+d849B6beEeglNMcOxyjwlqjykN+FA==
   dependencies:
     invariant "^2.2.4"
     lodash "^4.5.0"
@@ -2981,6 +2981,13 @@ commondir@^1.0.1:
   resolved "https://registry.yarnpkg.com/commondir/-/commondir-1.0.1.tgz#ddd800da0c66127393cca5950ea968a3aaf1253b"
   integrity sha1-3dgA2gxmEnOTzKWVDqloo6rxJTs=
 
+compare-urls@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/compare-urls/-/compare-urls-2.0.0.tgz#9b378c4abd43980a8700fffec9afb85de4df9075"
+  integrity sha512-eCJcWn2OYFEIqbm70ta7LQowJOOZZqq1a2YbbFCFI1uwSvj+TWMwXVn7vPR1ceFNcAIt5RSTDbwdlX82gYLTkA==
+  dependencies:
+    normalize-url "^2.0.1"
+
 compare-versions@^3.4.0:
   version "3.6.0"
   resolved "https://registry.yarnpkg.com/compare-versions/-/compare-versions-3.6.0.tgz#1a5689913685e5a87637b8d3ffca75514ec41d62"
@@ -3482,7 +3489,14 @@ eslint-config-airbnb@18.1.0:
     object.assign "^4.1.0"
     object.entries "^1.1.1"
 
-eslint-config-prettier@6.10.1, eslint-config-prettier@^6.10.1:
+eslint-config-prettier@6.11.0:
+  version "6.11.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-6.11.0.tgz#f6d2238c1290d01c859a8b5c1f7d352a0b0da8b1"
+  integrity sha512-oB8cpLWSAjOVFEJhhyMZh6NOEOtBVziaqdDQ86+qhDHFbZXoRTM7pNSvFRfW/W/L/LrQ38C99J5CGuRBBzBsdA==
+  dependencies:
+    get-stdin "^6.0.0"
+
+eslint-config-prettier@^6.10.1:
   version "6.10.1"
   resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-6.10.1.tgz#129ef9ec575d5ddc0e269667bf09defcd898642a"
   integrity sha512-svTy6zh1ecQojvpbJSgH3aei/Rt7C6i090l5f2WQ4aB05lYHeZIR1qL4wZyyILTbtmnbHP5Yn8MrsOJMGa8RkQ==
@@ -3580,6 +3594,13 @@ eslint-plugin-prettier@3.1.2:
   dependencies:
     prettier-linter-helpers "^1.0.0"
 
+eslint-plugin-prettier@3.1.3:
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-prettier/-/eslint-plugin-prettier-3.1.3.tgz#ae116a0fc0e598fdae48743a4430903de5b4e6ca"
+  integrity sha512-+HG5jmu/dN3ZV3T6eCD7a4BlAySdN7mLIbJYo0z1cFQuI+r2DiTJEFeF68ots93PsnrMxbzIZ2S/ieX+mkrBeQ==
+  dependencies:
+    prettier-linter-helpers "^1.0.0"
+
 eslint-plugin-react-hooks@3.0.0, eslint-plugin-react-hooks@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-3.0.0.tgz#9e80c71846eb68dd29c3b21d832728aa66e5bd35"
@@ -3624,15 +3645,16 @@ eslint-plugin-react@7.19.0:
     string.prototype.matchall "^4.0.2"
     xregexp "^4.3.0"
 
-eslint-plugin-unicorn@18.0.1:
-  version "18.0.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-unicorn/-/eslint-plugin-unicorn-18.0.1.tgz#8d3285ffa57b2f6b07550b94e62228d93bf61813"
-  integrity sha512-Y4bgygek4x4ogeMcSHr6MZi3frBPZ80eIpMOsxew7jAblb53OYflpRh0an62Z6jv/fw7D3TkXauqLOBWbT9adg==
+eslint-plugin-unicorn@19.0.1:
+  version "19.0.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-unicorn/-/eslint-plugin-unicorn-19.0.1.tgz#05eef02f33426b8aa4f21cd5e4785b456335b85b"
+  integrity sha512-fu0/h5mHXfBC6EkA3i2vCjsfC8j53+T9txGhNL4fpxJ+1JKsUKfv+tmXDgy0XnLHhFjnOZp4tRWJWbcykeIP2Q==
   dependencies:
     ci-info "^2.0.0"
     clean-regexp "^1.0.0"
     eslint-ast-utils "^1.1.0"
     eslint-template-visitor "^1.1.0"
+    eslint-utils "^2.0.0"
     import-modules "^2.0.0"
     lodash "^4.17.15"
     read-pkg-up "^7.0.1"
@@ -3858,7 +3880,7 @@ expo-font@~8.1.0:
     fbjs "1.0.0"
     fontfaceobserver "^2.1.0"
 
-expo-keep-awake@~8.1.0:
+expo-keep-awake@8.1.0, expo-keep-awake@~8.1.0:
   version "8.1.0"
   resolved "https://registry.yarnpkg.com/expo-keep-awake/-/expo-keep-awake-8.1.0.tgz#3a1d8aa5a8395d40c7d79e1c93020ae5f848e664"
   integrity sha512-RNPwWvpwsJwJS8ZI1yklKyVQ6l2NNZBCN2aSgQMRza2SABnpFFzDLHQwMo7DC+nbmrOueMvCIDr0VI3xrzGfEg==
@@ -3889,10 +3911,12 @@ expo-sqlite@~8.1.0:
     "@types/websql" "^0.0.27"
     lodash "^4.17.15"
 
-expo-web-browser@~8.1.0:
-  version "8.1.0"
-  resolved "https://registry.yarnpkg.com/expo-web-browser/-/expo-web-browser-8.1.0.tgz#1b4ca25e4dd600fac9ad16e32d81be47778c2667"
-  integrity sha512-Js2LIGut0NRKF+8BdQ2EOwGF2B2VYlnHgERxRtR+vHw7NOa7ZSl2GKFlAmf8QvAHqskk1OD0tujtoATv9XcELg==
+expo-web-browser@~8.2.0:
+  version "8.2.0"
+  resolved "https://registry.yarnpkg.com/expo-web-browser/-/expo-web-browser-8.2.0.tgz#18f14fef54bb20e723760083689bc0aef130bb23"
+  integrity sha512-pcXcKbjqsgmSM8lBHRgLhO+OKvlnkwfQHvvA4uVcF1Qv5/2L1zp/VY64E9G1K+5at3KHoZ7JqgFjl7tu7Rzi1Q==
+  dependencies:
+    compare-urls "^2.0.0"
 
 expo-yarn-workspaces@1.2.1:
   version "1.2.1"
@@ -3903,10 +3927,10 @@ expo-yarn-workspaces@1.2.1:
     find-yarn-workspace-root "^1.2.0"
     mkdirp "^0.5.1"
 
-expo@~37.0.3:
-  version "37.0.7"
-  resolved "https://registry.yarnpkg.com/expo/-/expo-37.0.7.tgz#fdfb54cc91d06d58aa4839c3d0c1c4bd499f601e"
-  integrity sha512-UI/5iWsL3isu1eJaDV1Iu7m/nepn2ywEDcW2Vl006RDF/z41hW/emBRpqNfBnOqyqlvHqN+Von4g/ANFTMZ5OA==
+expo@37.0.8:
+  version "37.0.8"
+  resolved "https://registry.yarnpkg.com/expo/-/expo-37.0.8.tgz#83643f329d734e331a1c419ac9a85670628271bb"
+  integrity sha512-0dt8F1yC/tNINL5Cy76OY4VYc4nwLsdyVELWk4mHRJAEEurYTn/hT/zayDAtTKV3uDykpQ8gALgP4QQprs5cwQ==
   dependencies:
     "@babel/runtime" "^7.1.2"
     "@expo/vector-icons" "^10.0.2"
@@ -3915,7 +3939,7 @@ expo@~37.0.3:
     "@types/lodash.zipobject" "^4.1.4"
     "@types/qs" "^6.5.1"
     "@unimodules/core" "~5.1.0"
-    "@unimodules/react-native-adapter" "~5.1.1"
+    "@unimodules/react-native-adapter" "~5.2.0"
     babel-preset-expo "~8.1.0"
     badgin "^1.1.2"
     cross-spawn "^6.0.5"
@@ -3929,7 +3953,7 @@ expo@~37.0.3:
     expo-location "~8.1.0"
     expo-permissions "~8.1.0"
     expo-sqlite "~8.1.0"
-    expo-web-browser "~8.1.0"
+    expo-web-browser "~8.2.0"
     fbemitter "^2.1.1"
     invariant "^2.2.2"
     lodash "^4.6.0"
@@ -4209,10 +4233,10 @@ flatted@^2.0.0:
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-2.0.0.tgz#55122b6536ea496b4b44893ee2608141d10d9916"
   integrity sha512-R+H8IZclI8AAkSBRQJLVOsxwAoHd6WC40b4QTNWIjzAa6BXOBfQcM587MXDTVPeYaopFNWHUFLx7eNmHDSxMWg==
 
-flow-bin@0.113.0:
-  version "0.113.0"
-  resolved "https://registry.yarnpkg.com/flow-bin/-/flow-bin-0.113.0.tgz#6457d250dbc6f71ca51e75f00a96d23cde5d987a"
-  integrity sha512-76uE2LGNe50wm+Jup8Np4FBcMbyy5V2iE+K25PPIYLaEMGHrL1jnQfP9L0hTzA5oh2ZJlexRLMlaPqIYIKH9nw==
+flow-bin@0.123.0:
+  version "0.123.0"
+  resolved "https://registry.yarnpkg.com/flow-bin/-/flow-bin-0.123.0.tgz#7ba61a0b8775928cf4943ccf78eed2b1b05f7b3a"
+  integrity sha512-Ylcf8YDIM/KrqtxkPuq+f8O+6sdYA2Nuz5f+sWHlp539DatZz3YMcsO1EiXaf1C11HJgpT/3YGYe7xZ9/UZmvQ==
 
 flow-typed@3.1.0:
   version "3.1.0"
@@ -4897,6 +4921,11 @@ is-obj@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/is-obj/-/is-obj-1.0.1.tgz#3e4729ac1f5fde025cd7d83a896dab9f4f67db0f"
   integrity sha1-PkcprB9f3gJc19g6iW2rn09n2w8=
+
+is-plain-obj@^1.0.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/is-plain-obj/-/is-plain-obj-1.1.0.tgz#71a50c8429dfca773c92a390a4a03b39fcd51d3e"
+  integrity sha1-caUMhCnfync8kqOQpKA7OfzVHT4=
 
 is-plain-object@^2.0.1, is-plain-object@^2.0.3, is-plain-object@^2.0.4:
   version "2.0.4"
@@ -6030,6 +6059,15 @@ normalize-path@^3.0.0:
   resolved "https://registry.yarnpkg.com/normalize-path/-/normalize-path-3.0.0.tgz#0dcd69ff23a1c9b11fd0978316644a0388216a65"
   integrity sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==
 
+normalize-url@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/normalize-url/-/normalize-url-2.0.1.tgz#835a9da1551fa26f70e92329069a23aa6574d7e6"
+  integrity sha512-D6MUW4K/VzoJ4rJ01JFKxDrtY1v9wrgzCX5f2qj/lzH1m/lW6MhUZFKerVsnyjOhOsYzI9Kqqak+10l4LvLpMw==
+  dependencies:
+    prepend-http "^2.0.0"
+    query-string "^5.0.1"
+    sort-keys "^2.0.0"
+
 normalize-url@^4.1.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/normalize-url/-/normalize-url-4.5.0.tgz#453354087e6ca96957bd8f5baf753f5982142129"
@@ -6536,6 +6574,11 @@ prelude-ls@~1.1.2:
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.1.2.tgz#21932a549f5e52ffd9a827f570e04be62a97da54"
   integrity sha1-IZMqVJ9eUv/ZqCf1cOBL5iqX2lQ=
 
+prepend-http@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-2.0.0.tgz#e92434bfa5ea8c19f41cdfd401d741a3c819d897"
+  integrity sha1-6SQ0v6XqjBn0HN/UAddBo8gZ2Jc=
+
 prettier-linter-helpers@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/prettier-linter-helpers/-/prettier-linter-helpers-1.0.0.tgz#d23d41fe1375646de2d0104d3454a3008802cf7b"
@@ -6543,15 +6586,20 @@ prettier-linter-helpers@^1.0.0:
   dependencies:
     fast-diff "^1.1.2"
 
-prettier@2.0.4, prettier@^2.0.2:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.0.4.tgz#2d1bae173e355996ee355ec9830a7a1ee05457ef"
-  integrity sha512-SVJIQ51spzFDvh4fIbCLvciiDMCrRhlN3mbZvv/+ycjvmF5E73bKdGfU8QDLNmjYJf+lsGnDBC4UUnvTe5OO0w==
+prettier@2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.0.5.tgz#d6d56282455243f2f92cc1716692c08aa31522d4"
+  integrity sha512-7PtVymN48hGcO4fGjybyBSIWDsLU4H4XlvOHfq91pz9kkGlonzwTfYkaIEwiRg/dAJF9YlbsduBAgtYLi+8cFg==
 
 prettier@^1.16.4, prettier@^1.19.1:
   version "1.19.1"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.19.1.tgz#f7d7f5ff8a9cd872a7be4ca142095956a60797cb"
   integrity sha512-s7PoyDv/II1ObgQunCbB9PdLmUcBZcnWOcxDh7O0N/UwDEsHyqkW+Qh28jW+mVuCdx7gLB0BotYI1Y6uI9iyew==
+
+prettier@^2.0.2:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.0.4.tgz#2d1bae173e355996ee355ec9830a7a1ee05457ef"
+  integrity sha512-SVJIQ51spzFDvh4fIbCLvciiDMCrRhlN3mbZvv/+ycjvmF5E73bKdGfU8QDLNmjYJf+lsGnDBC4UUnvTe5OO0w==
 
 pretty-format@^23.6.0:
   version "23.6.0"
@@ -6634,6 +6682,15 @@ qs@^6.5.0:
   version "6.9.3"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.9.3.tgz#bfadcd296c2d549f1dffa560619132c977f5008e"
   integrity sha512-EbZYNarm6138UKKq46tdx08Yo/q9ZhFoAXAI1meAFd2GtbRDhbZY2WQSICskT0c5q99aFzLG1D4nvTk9tqfXIw==
+
+query-string@^5.0.1:
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/query-string/-/query-string-5.1.1.tgz#a78c012b71c17e05f2e3fa2319dd330682efb3cb"
+  integrity sha512-gjWOsm2SoGlgLEdAGt7a6slVOk9mGiXmPFMqrEhLQ68rhQuBnpfs3+EmlvqKyxnCo9/PPlF+9MtY02S1aFg+Jw==
+  dependencies:
+    decode-uri-component "^0.2.0"
+    object-assign "^4.1.0"
+    strict-uri-encode "^1.0.0"
 
 querystringify@^2.1.1:
   version "2.1.1"
@@ -7404,6 +7461,13 @@ snapdragon@^0.8.1:
     source-map-resolve "^0.5.0"
     use "^3.1.0"
 
+sort-keys@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/sort-keys/-/sort-keys-2.0.0.tgz#658535584861ec97d730d6cf41822e1f56684128"
+  integrity sha1-ZYU1WEhh7JfXMNbPQYIuH1ZoQSg=
+  dependencies:
+    is-plain-obj "^1.0.0"
+
 source-map-resolve@^0.5.0:
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/source-map-resolve/-/source-map-resolve-0.5.2.tgz#72e2cc34095543e43b2c62b2c4c10d4a9054f259"
@@ -7505,6 +7569,11 @@ stream-buffers@~2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/stream-buffers/-/stream-buffers-2.2.0.tgz#91d5f5130d1cef96dcfa7f726945188741d09ee4"
   integrity sha1-kdX1Ew0c75bc+n9yaUUYh0HQnuQ=
+
+strict-uri-encode@^1.0.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/strict-uri-encode/-/strict-uri-encode-1.1.0.tgz#279b225df1d582b1f54e65addd4352e18faa0713"
+  integrity sha1-J5siXfHVgrH1TmWt3UNS4Y+qBxM=
 
 string-width@^1.0.1:
   version "1.0.2"
