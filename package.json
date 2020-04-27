@@ -16,7 +16,10 @@
         "react-native",
         "ios",
         "android",
-        "slider"
+        "slider",
+        "web",
+        "expo",
+        "react-native-web"
     ],
     "license": "MIT",
     "scripts": {
