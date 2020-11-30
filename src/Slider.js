@@ -728,10 +728,12 @@ class Slider extends PureComponent<SliderProps, SliderState> {
                                     : styles.thumb,
                                 renderThumbComponent
                                     ? {}
-                                    : {
-                                          backgroundColor: thumbTintColor,
-                                          ...thumbStyle,
-                                      },
+                                    : [
+                                          {
+                                              backgroundColor: thumbTintColor,
+                                          },
+                                          thumbStyle,
+                                      ],
                                 {
                                     transform: [
                                         {translateX: value},
