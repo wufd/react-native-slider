@@ -559,7 +559,12 @@ class Slider extends PureComponent<SliderProps, SliderState> {
 
     _getPropsThumbSize = (props) => {
         const {thumbStyle = null} = props;
-        if (!!thumbStyle && !!thumbStyle.width && !!thumbStyle.height) {
+        if (
+            !!thumbStyle &&
+            typeof thumbStyle === 'object' &&
+            Object.prototype.hasOwnProperty.call(thumbStyle, 'width') &&
+            Object.prototype.hasOwnProperty.call(thumbStyle, 'height')
+        ) {
             return {
                 width: thumbStyle.width,
                 height: thumbStyle.height,
