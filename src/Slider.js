@@ -3,6 +3,7 @@ import React, {PureComponent} from 'react';
 import {
     Animated,
     Image,
+    Text,
     PanResponder,
     View,
     Easing,
@@ -84,8 +85,11 @@ function normalizeValue(
 
 function updateValues(
     values: typeof Animated.Value | Array<typeof Animated.Value>,
-    newValues?: typeof Animated.Value | Array<typeof Animated.Value> = values,
+    newValues?: typeof Animated.Value | Array<typeof Animated.Value>,
 ) {
+    if (!newValues) {
+        newValues = values;
+    }
     if (
         Array.isArray(newValues) &&
         Array.isArray(values) &&
@@ -121,7 +125,7 @@ function indexOfLowest(values: Array<number>): number {
     return lowestIndex;
 }
 
-export class Slider extends PureComponent<SliderProps, SliderState> {
+class Slider extends PureComponent<SliderProps, SliderState> {
     constructor(props: SliderProps) {
         super(props);
         this._panResponder = PanResponder.create({
@@ -138,7 +142,7 @@ export class Slider extends PureComponent<SliderProps, SliderState> {
         this.state = {
             allMeasured: false,
             containerSize: {width: 0, height: 0},
-            thumbSize: {width: 0, height: 0},
+            thumbSize: this._getPropsThumbSize(props),
             trackMarksValues: updateValues(
                 normalizeValue(this.props, this.props.trackMarks),
             ),
@@ -543,6 +547,30 @@ export class Slider extends PureComponent<SliderProps, SliderState> {
         );
     };
 
+    _renderThumbText = () => {
+        const {thumbText, thumbTextStyle} = this.props;
+        if (!thumbText) {
+            return null;
+        }
+        return (
+            <Text style={[styles.thumbText, thumbTextStyle]}>{thumbText}</Text>
+        );
+    };
+
+    _getPropsThumbSize = (props) => {
+        const {thumbStyle = null} = props;
+        if (!!thumbStyle && !!thumbStyle.width && !!thumbStyle.height) {
+            return {
+                width: thumbStyle.width,
+                height: thumbStyle.height,
+            };
+        }
+        return {
+            width: 0,
+            height: 0,
+        };
+    };
+
     render() {
         const {
             animateTransitions,
@@ -715,7 +743,8 @@ export class Slider extends PureComponent<SliderProps, SliderState> {
                             onLayout={this._measureThumb}>
                             {renderThumbComponent
                                 ? renderThumbComponent()
-                                : this._renderThumbImage(i)}
+                                : this._renderThumbImage(i) ||
+                                  this._renderThumbText()}
                         </Animated.View>
                     ))}
                     <View
@@ -731,3 +760,5 @@ export class Slider extends PureComponent<SliderProps, SliderState> {
         );
     }
 }
+
+export default Slider;

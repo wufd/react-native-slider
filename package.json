@@ -1,8 +1,8 @@
 {
-    "name": "@miblanchard/react-native-slider",
+    "name": "react-native-slider",
     "version": "1.5.1",
     "description": "A pure JavaScript <Slider /> component for react-native",
-    "main": "lib/Slider.js",
+    "main": "src/Slider.js",
     "typings": "src/index",
     "files": [
         "lib",
@@ -19,6 +19,7 @@
         "android",
         "slider"
     ],
+    "homepage": "https://github.com/wufd/react-native-slider/",
     "license": "MIT",
     "scripts": {
         "build": "babel src --out-dir lib --ignore 'src/__stories__/**'",

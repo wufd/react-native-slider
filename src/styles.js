@@ -40,4 +40,9 @@ export const defaultStyles = StyleSheet.create({
         borderRadius: TRACK_SIZE / 2,
         height: TRACK_SIZE,
     },
+    thumbText: {
+        color: '#3A5ADB',
+        fontSize: 15,
+        fontWeight: '600',
+    },
 });

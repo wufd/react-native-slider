@@ -1,8 +1,7 @@
 /* @flow */
 import * as React from 'react';
 import {SafeAreaView, ScrollView, Text, View} from 'react-native';
-import {Slider} from '../../src/Slider';
-// styles
+import Slider from '../../src/Slider';
 import {
     aboveThumbStyles,
     componentThumbStyles,
@@ -96,14 +95,14 @@ const App = () => (
             </SliderContainer>
             <SliderContainer caption="<Slider/> with custom thumb component">
                 <Slider
-                    animateTransition
+                    animateTransitions
                     renderThumbComponent={CustomThumb}
                     trackStyle={customStyles.track}
                 />
             </SliderContainer>
             <SliderContainer caption="<Slider/> with custom above thumb component">
                 <Slider
-                    animateTransition
+                    animateTransitions
                     renderAboveThumbComponent={renderAboveThumbComponent}
                 />
             </SliderContainer>
@@ -111,7 +110,7 @@ const App = () => (
                 caption="<Slider/> 2 thumbs, min, max, and custom tint"
                 sliderValue={[6, 18]}>
                 <Slider
-                    animateTransition
+                    animateTransitions
                     maximumTrackTintColor="#d3d3d3"
                     maximumValue={20}
                     minimumTrackTintColor="#1fb28a"
@@ -123,7 +122,7 @@ const App = () => (
 
             <SliderContainer caption="<Slider/> with min, max and custom tints">
                 <Slider
-                    animateTransition
+                    animateTransitions
                     maximumTrackTintColor="#d3d3d3"
                     maximumValue={42}
                     minimumTrackTintColor="#1fb28a"
@@ -133,7 +132,7 @@ const App = () => (
             </SliderContainer>
             <SliderContainer caption="<Slider/> with custom style">
                 <Slider
-                    animateTransition
+                    animateTransitions
                     maximumTrackTintColor="#b7b7b7"
                     minimumTrackTintColor="#1073ff"
                     thumbStyle={iosStyles.thumb}
@@ -142,7 +141,7 @@ const App = () => (
             </SliderContainer>
             <SliderContainer caption="<Slider/> with custom style #2">
                 <Slider
-                    animateTransition
+                    animateTransitions
                     minimumTrackTintColor="#30a935"
                     thumbStyle={customStyles2.thumb}
                     trackStyle={customStyles2.track}
@@ -150,7 +149,7 @@ const App = () => (
             </SliderContainer>
             <SliderContainer caption="<Slider/> with custom style #3">
                 <Slider
-                    animateTransition
+                    animateTransitions
                     minimumTrackTintColor="#eecba8"
                     thumbStyle={customStyles3.thumb}
                     trackStyle={customStyles3.track}
@@ -158,7 +157,7 @@ const App = () => (
             </SliderContainer>
             <SliderContainer caption="<Slider/> with custom style #4">
                 <Slider
-                    animateTransition
+                    animateTransitions
                     minimumTrackTintColor="#d14ba6"
                     thumbStyle={customStyles4.thumb}
                     trackStyle={customStyles4.track}
@@ -166,7 +165,7 @@ const App = () => (
             </SliderContainer>
             <SliderContainer caption="<Slider/> with custom style #5">
                 <Slider
-                    animateTransition
+                    animateTransitions
                     minimumTrackTintColor="#ec4c46"
                     thumbStyle={customStyles5.thumb}
                     trackStyle={customStyles5.track}
@@ -174,7 +173,7 @@ const App = () => (
             </SliderContainer>
             <SliderContainer caption="<Slider/> with custom style #6">
                 <Slider
-                    animateTransition
+                    animateTransitions
                     minimumTrackTintColor="#e6a954"
                     thumbStyle={customStyles6.thumb}
                     trackStyle={customStyles6.track}
@@ -182,7 +181,7 @@ const App = () => (
             </SliderContainer>
             <SliderContainer caption="<Slider/> with custom style #7">
                 <Slider
-                    animateTransition
+                    animateTransitions
                     minimumTrackTintColor="#2f2f2f"
                     thumbStyle={customStyles7.thumb}
                     trackStyle={customStyles7.track}
@@ -190,7 +189,7 @@ const App = () => (
             </SliderContainer>
             <SliderContainer caption="<Slider/> with custom style #8 and thumbTouchSize">
                 <Slider
-                    animateTransition
+                    animateTransitions
                     conatinerStyle={customStyles8.container}
                     minimumTrackTintColor="#31a4db"
                     thumbStyle={customStyles8.thumb}
@@ -200,11 +199,29 @@ const App = () => (
             </SliderContainer>
             <SliderContainer caption="<Slider/> with custom style #9 and thumbImage">
                 <Slider
-                    animateTransition
+                    animateTransitions
                     minimumTrackTintColor="#13a9d6"
                     thumbImage={thumbImage}
                     thumbStyle={customStyles9.thumb}
                     thumbTintColor="#0c6692"
+                />
+
+                <Slider
+                    animateTransitions
+                    minimumTrackTintColor="#13a9d6"
+                    thumbStyle={{
+                        width: 36, //12
+                        height: 26, //22
+                        backgroundColor: 'red',
+                        borderColor: '#f5f5f8',
+                        borderWidth: 1,
+                        borderRadius: 6,
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                    }}
+                    thumbTintColor={'blue'}
+                    thumbText={'TEST'}
+                    thumbTextStyle={{fontSize: 11}}
                 />
             </SliderContainer>
         </ScrollView>
